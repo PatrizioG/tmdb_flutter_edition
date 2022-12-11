@@ -5,6 +5,7 @@ class Movie {
   final double popularity;
   final String backdropPath;
   final String posterPath;
+  final String releaseDate;
 
   const Movie({
     required this.id,
@@ -13,6 +14,7 @@ class Movie {
     required this.popularity,
     required this.backdropPath,
     required this.posterPath,
+    required this.releaseDate,
   });
 
   factory Movie.fromJson(Map<String, dynamic> json) {
@@ -23,6 +25,7 @@ class Movie {
       popularity: json['popularity'],
       backdropPath: json['backdrop_path'],
       posterPath: json['poster_path'],
+      releaseDate: json['release_date'],
     );
   }
 }
