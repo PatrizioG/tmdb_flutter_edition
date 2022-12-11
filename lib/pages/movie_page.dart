@@ -11,24 +11,30 @@ class MoviePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: tmdbAppBar(false),
+      appBar: tmdbAppBar(),
       body: Column(
         children: [
-          Text(movie.title),
           Stack(children: [
             MovieBackground(
               "https://image.tmdb.org/t/p/w1280${movie.backdropPath}",
-              height: 400,
+              height: 500,
             ),
-            Positioned(
-              left: 50.0,
-              top: 20.0,
-              child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: Image.network(
-                    "https://image.tmdb.org/t/p/w154${movie.posterPath}",
-                    width: 154,
-                  )),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.network(
+                        "https://image.tmdb.org/t/p/w154${movie.posterPath}",
+                        width: 154,
+                      )),
+                ),
+                Text(
+                  movie.title,
+                  style: const TextStyle(color: Colors.white),
+                )
+              ],
             ),
           ])
         ],

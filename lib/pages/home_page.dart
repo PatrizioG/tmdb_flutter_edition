@@ -12,9 +12,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: tmdbAppBar(true),
+      appBar: tmdbAppBar(),
       body: Container(
-          constraints: const BoxConstraints(maxHeight: 300),
+          constraints: const BoxConstraints(maxHeight: 400),
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 16.0),
             child: PopularMovies(),
