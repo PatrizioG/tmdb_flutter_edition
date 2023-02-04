@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:tmdb_flutter_edition/pages/home_page.dart';
 
 void main() {

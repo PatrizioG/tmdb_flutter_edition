@@ -9,7 +9,7 @@ PreferredSizeWidget? tmdbAppBar() {
         Container(
           height: 40,
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          child: Image.asset('tmdb_logo.png'),
+          child: const Image(image: AssetImage('assets/tmdb_logo.png')),
         ),
         Text(
           'flutter edition',

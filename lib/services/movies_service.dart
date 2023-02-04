@@ -11,7 +11,8 @@ Future<http.Response> fetchAlbum() {
 
 class MoviesService {
   static Future<List<Movie>> fetchPopulars() async {
-    final response = await http.get(Uri.parse("${base}movie/popular"),
+    final response = await http.get(
+        Uri.parse("${base}movie/popular?language=it"),
         headers: composeHeaders());
 
     if (response.statusCode == 200) {
